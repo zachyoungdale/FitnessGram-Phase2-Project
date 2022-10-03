@@ -1,0 +1,93 @@
+{
+  "exercises": [
+    {
+      "id": 1,
+      "name": "Bench Press",
+      "body": "Chest",
+      "weight": 115,
+      "reps": 10,
+      "sets": 3
+    },
+    {
+      "id": 2,
+      "name": "Barbell Squat",
+      "body": "Legs",
+      "weight": 150,
+      "reps": 10,
+      "sets": 3
+    },
+    {
+      "id": 3,
+      "name": "Seated Row",
+      "body": "Back and Biceps",
+      "weight": 100,
+      "reps": 10,
+      "sets": 3
+    },
+    {
+      "id": 4,
+      "name": "Dumbbell Curl",
+      "body": "Biceps",
+      "weight": 25,
+      "reps": 10,
+      "sets": 3
+    },
+    {
+      "id": 5,
+      "name": "Tricep Press",
+      "body": "Triceps",
+      "weight": 50,
+      "reps": 10,
+      "sets": 3
+    },
+    {
+      "id": 6,
+      "name": "Lateral Raises",
+      "body": "Shoulders",
+      "weight": 15,
+      "reps": 10,
+      "sets": 3
+    },
+    {
+      "id": 7,
+      "name": "Shoulder Press",
+      "body": "Shoulders",
+      "weight": 25,
+      "reps": 10,
+      "sets": 3
+    },
+    {
+      "id": 8,
+      "name": "Assisted Pull-Ups",
+      "body": "Back and Biceps",
+      "weight": 115,
+      "reps": 10,
+      "sets": 3
+    },
+    {
+      "id": 9,
+      "name": "Leg Extensions",
+      "body": "Legs",
+      "weight": 80,
+      "reps": 10,
+      "sets": 3
+    },
+    {
+      "id": 10,
+      "name": "Leg Curl",
+      "body": "Legs",
+      "weight": 80,
+      "reps": 10,
+      "sets": 3
+    }
+  ],
+
+  "blogs": [
+    {
+      "id": 1,
+      "subject": "Your blog posts will show here",
+      "Date": "September 1, 2022",
+      "Message": "This will be where you can write your blog content! "
+    }
+  ]
+}
