@@ -25,6 +25,17 @@ function App() {
     setExercises([...exercises, newObj]);
   }
 
+  function updateExercise(updatedObj) {
+    const updatedExerciseArray = exercises.map((exercise) => {
+      if (exercise.id === updatedObj.id) {
+        return updatedObj;
+      }
+      return exercise;
+    });
+
+    setExercises(updatedExerciseArray);
+  }
+
   const filteredExerciseArray = exercises.filter((exercise) => {
     return (
       exercise.name.toLowerCase().includes(search.toLowerCase()) ||
@@ -39,6 +50,7 @@ function App() {
       <ExerciseList
         exercises={filteredExerciseArray}
         addNewExercise={addNewExercise}
+        updateExercise={updateExercise}
       />
       <BlogList />
       <NewBlogForm />

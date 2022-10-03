@@ -2,9 +2,15 @@ import React, { useState } from "react";
 import ExerciseCard from "./ExerciseCard";
 import NewExerciseForm from "./NewExerciseForm";
 
-function ExerciseList({ exercises, addNewExercise }) {
+function ExerciseList({ exercises, addNewExercise, updateExercise }) {
   const exerciseCards = exercises.map((exercise) => {
-    return <ExerciseCard key={exercise.id} {...exercise} />;
+    return (
+      <ExerciseCard
+        key={exercise.id}
+        {...exercise}
+        updateExercise={updateExercise}
+      />
+    );
   });
 
   return (

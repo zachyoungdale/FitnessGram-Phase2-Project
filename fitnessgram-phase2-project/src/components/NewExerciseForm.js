@@ -7,7 +7,8 @@ function NewExerciseForm({ addNewExercise }) {
   const [newReps, setNewReps] = useState(0);
   const [newSets, setNewSets] = useState(0);
 
-  function handleSubmit() {
+  function handleSubmit(e) {
+    e.preventDefault();
     const newExercise = {
       name: newName,
       bodyPart: newBodyPart,
