@@ -21,6 +21,10 @@ function App() {
       .then((data) => setBlogs(data));
   }, []);
 
+  function addNewExercise(newObj) {
+    setExercises([...exercises, newObj]);
+  }
+
   const filteredExerciseArray = exercises.filter((exercise) => {
     return (
       exercise.name.toLowerCase().includes(search.toLowerCase()) ||
@@ -32,7 +36,10 @@ function App() {
     <div className="App">
       <Header />
       <Search search={search} setSearch={setSearch} />
-      <ExerciseList exercises={filteredExerciseArray} />
+      <ExerciseList
+        exercises={filteredExerciseArray}
+        addNewExercise={addNewExercise}
+      />
       <BlogList />
       <NewBlogForm />
     </div>
