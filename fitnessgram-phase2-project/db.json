@@ -79,6 +79,14 @@
       "weight": 80,
       "reps": 10,
       "sets": 3
+    },
+    {
+      "name": "chloe",
+      "bodyPart": "legs",
+      "weight": 10,
+      "reps": 10,
+      "sets": 10,
+      "id": 11
     }
   ],
   "blogs": [
@@ -87,6 +95,30 @@
       "subject": "Your blog posts will show here",
       "date": "September 1, 2022",
       "content": "This will be where you can write your blog content! "
+    },
+    {
+      "subject": "dd",
+      "date": "ddd",
+      "content": "dddd",
+      "id": 2
+    },
+    {
+      "subject": "dd",
+      "date": "ddd",
+      "content": "dddd",
+      "id": 3
+    },
+    {
+      "subject": "dd",
+      "date": "ddd",
+      "content": "dddd",
+      "id": 4
+    },
+    {
+      "subject": "dd",
+      "date": "ddd",
+      "content": "dddd",
+      "id": 5
     }
   ]
 }

@@ -56,15 +56,6 @@ function App() {
       <NavBar />
       <Search search={search} setSearch={setSearch} />
         <Switch>
-          <Route exact path="/exercise-list">
-            <ExerciseList
-            exercises={filteredExerciseArray}
-            addNewExercise={addNewExercise}
-            updateExercise={updateExercise}
-            search={search}
-            setSearch={setSearch}
-            />
-          </Route>
           <Route path="/blog-list">
             <BlogList blogs={blogs} />
           </Route>
@@ -73,6 +64,15 @@ function App() {
           </Route>
           <Route path="/new-exercise-form">
             <NewExerciseForm addNewExercise={addNewExercise} />
+          </Route>
+          <Route exact path="/">
+            <ExerciseList
+            exercises={filteredExerciseArray}
+            addNewExercise={addNewExercise}
+            updateExercise={updateExercise}
+            search={search}
+            setSearch={setSearch}
+            />
           </Route>
         </Switch>
     </div>

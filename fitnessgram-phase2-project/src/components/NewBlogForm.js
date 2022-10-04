@@ -21,15 +21,18 @@ function NewBlogForm({ addNewBlog }) {
     })
     .then(resp => resp.json())
     .then(data => addNewBlog(data)) 
+      setSubject("")
+      setDate("")
+      setContent("")
   }
   
   return ( 
     <div>
     <h2>Post your blog</h2>
   <form onSubmit={handleSubmit}>
-    <input type="text" name="subject" placeholder="Enter subject..." onChange={(e) => setSubject(e.target.value)}/>
-    <input type="text" name="date" placeholder="Enter date..." onChange={(e) => setDate(e.target.value)}/>
-    <input type="text" name="content" placeholder="Enter blog content..." onChange={(e) => setContent(e.target.value)}/>
+    <input type="text" name="subject" value={subject} placeholder="Enter subject..." onChange={(e) => setSubject(e.target.value)}/>
+    <input type="text" name="date" value={date} placeholder="Enter date..." onChange={(e) => setDate(e.target.value)}/>
+    <input type="text" name="content" value={content} placeholder="Enter blog content..." onChange={(e) => setContent(e.target.value)}/>
     <input type="submit" name="submit" value="Submit" />
   </form>
 </div>

@@ -17,7 +17,7 @@ function NavBar() {
          <NavLink to="/new-blog-form" exact style={linkStyles} activeStyle={{background: "darkblue",}}>NewBlogForm</NavLink>
          <NavLink to="/new-exercise-form" exact style={linkStyles} activeStyle={{background: "darkblue",}}>NewExerciseList</NavLink>
          <NavLink to="/blog-list" exact style={linkStyles} activeStyle={{background: "darkblue",}}>BlogList</NavLink>
-         <NavLink to="/exercise-list" exact style={linkStyles} activeStyle={{background: "darkblue",}}>ExerciseList</NavLink>
+         <NavLink to="/" exact style={linkStyles} activeStyle={{background: "darkblue",}}>ExerciseList</NavLink>
         </div>
       );
     }
