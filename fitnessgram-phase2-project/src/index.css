@@ -44,7 +44,8 @@ code {
   transition: 0.50s;
 }
 
-.card-button {
+.card-button,
+.form-button {
   background-color: blue;
   color: white;
   border-radius: 10px;
@@ -53,14 +54,20 @@ code {
   border-color: transparent;
 }
 
+.card-button:hover,
+.form-button:hover {
+  background-color: darkblue;
+  transition: 1s;
+}
+
 .logo {
   color: antiquewhite;
 }
 
 .card {
+  flex: 0 1 15%;
   box-shadow: 0 4px 8px 0 blue;
   transition: 0.3s;
-  padding: 2px 16px;
   border-radius: 5px;
   margin: 20px;
   padding: 20px;
@@ -75,21 +82,39 @@ code {
   padding: 100px;
   display: flex;
   flex-wrap: wrap;
-  flex: 1 1 100%;
-  justify-content: center;
+  justify-content: start;
+  align-items: center;
 }
 
-.new-exercise-form {
-  display: flex;
-  flex-direction: column;
+.new-form {
+  display: grid;
   justify-content: center;
   align-items: center;
-  margin: 50px;
-  padding: 10px;
+  margin-top: 5rem;
 }
 
-.new-exercise-inputs {
-  width: 300px;
-  padding: 15px;
+.new-inputs {
+  border-color: blue;
+  width: 500px;
+  height: 50%;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: large;
+  padding: 5px;
+}
+
+.new-label {
+  font-size: large;
+  font-weight: bold;
+}
+
+#form-title {
+  text-align: center;
+}
+
+.new-inputs:focus {
+  box-shadow: 0 4px 8px 0 blue;
+  transition: 0.5s;
 }
 

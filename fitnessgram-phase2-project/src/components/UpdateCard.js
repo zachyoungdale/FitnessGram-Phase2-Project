@@ -41,48 +41,63 @@ function UpdateCard({
   return (
     <div>
       <div>
-        <form onSubmit={handleSubmit}>
-          <label for="Name">Name:</label>
+        <form onSubmit={handleSubmit} className="new-form">
+          <label for="Name" className="new-label">
+            Name:
+          </label>
           <input
+            className="new-inputs"
             type="text"
             name="Name"
             //value={updateName}
             placeholder={updateName}
             onChange={(e) => setUpdateName(e.target.value)}
           />
-          <label for="Body Part">Body Part:</label>
+          <label for="Body Part" className="new-label">
+            Body Part:
+          </label>
           <input
+            className="new-inputs"
             type="text"
             name="Body Part"
             //value={updateBodyPart}
             placeholder={updateBodyPart}
             onChange={(e) => setUpdateBodyPart(e.target.value)}
           />
-          <label for="Weight">Weight:</label>
+          <label for="Weight" className="new-label">
+            Weight:
+          </label>
           <input
+            className="new-inputs"
             type="number"
             name="Weight"
             //value={updateWeight}
             placeholder={updateWeight}
             onChange={(e) => setUpdateWeight(e.target.value)}
           />
-          <label for="Reps">Reps:</label>
+          <label for="Reps" className="new-label">
+            Reps:
+          </label>
           <input
+            className="new-inputs"
             type="number"
             name="Reps"
             //value={updateReps}
             placeholder={updateReps}
             onChange={(e) => setUpdateReps(e.target.value)}
           />
-          <label for="Sets">Sets:</label>
+          <label for="Sets" className="new-label">
+            Sets:
+          </label>
           <input
+            className="new-inputs"
             type="number"
             name="Sets"
             //value={updateSets}
             placeholder={updateSets}
             onChange={(e) => setUpdateSets(e.target.value)}
           />
-          <input type="submit" name="Submit" />
+          <input className="form-button" type="submit" name="Submit" />
         </form>
       </div>
     </div>
