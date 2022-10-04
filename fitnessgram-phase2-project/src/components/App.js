@@ -8,6 +8,7 @@ import NavBar from "./NavBar";
 import NewExerciseForm from "./NewExerciseForm";
 import { Route, Switch } from "react-router-dom";
 
+
 function App() {
   const [exercises, setExercises] = useState([]);
   const [blogs, setBlogs] = useState([]);
@@ -28,7 +29,7 @@ function App() {
   }
 
   function addNewBlog(newBlog) {
-    setBlogs([...blogs, newBlog])
+    setBlogs([...blogs, newBlog]);
   }
 
   function updateExercise(updatedObj) {
@@ -50,16 +51,18 @@ function App() {
   });
 
   return (
-    <div className="App">
+    <div className="bg-light">
       <Header />
       <NavBar />
       <Search search={search} setSearch={setSearch} />
         <Switch>
           <Route exact path="/exercise-list">
-            <ExerciseList 
+            <ExerciseList
             exercises={filteredExerciseArray}
             addNewExercise={addNewExercise}
             updateExercise={updateExercise}
+            search={search}
+            setSearch={setSearch}
             />
           </Route>
           <Route path="/blog-list">
@@ -69,7 +72,7 @@ function App() {
             <NewBlogForm addNewBlog={addNewBlog}/>
           </Route>
           <Route path="/new-exercise-form">
-            <NewExerciseForm />
+            <NewExerciseForm addNewExercise={addNewExercise} />
           </Route>
         </Switch>
     </div>

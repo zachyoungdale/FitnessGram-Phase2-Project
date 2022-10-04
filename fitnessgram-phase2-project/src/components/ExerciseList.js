@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import ExerciseCard from "./ExerciseCard";
-import NewExerciseForm from "./NewExerciseForm";
 
-function ExerciseList({ exercises, addNewExercise, updateExercise }) {
+function ExerciseList({ exercises, updateExercise }) {
   const exerciseCards = exercises.map((exercise) => {
     return (
       <ExerciseCard
@@ -13,12 +12,7 @@ function ExerciseList({ exercises, addNewExercise, updateExercise }) {
     );
   });
 
-  return (
-    <div className="exercise-list">
-      {exerciseCards}
-      <NewExerciseForm addNewExercise={addNewExercise} />
-    </div>
-  );
+  return <div className="card-list">{exerciseCards}</div>;
 }
 
 export default ExerciseList;

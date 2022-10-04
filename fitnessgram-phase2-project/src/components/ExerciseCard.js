@@ -12,13 +12,16 @@ function ExerciseCard({
 }) {
   const [showForm, setShowForm] = useState(false);
   return (
-    <div className="exercise-card">
-      <h2>{name}</h2>
-      <h3>Body Part: {bodyPart}</h3>
-      <h4>Weight: {weight}</h4>
-      <h4>Reps: {reps}</h4>
-      <h4>Sets: {sets}</h4>
-      <button onClick={() => setShowForm((showForm) => !showForm)}>
+    <div className="card">
+      <h1>{name}</h1>
+      <h2>Body Part: {bodyPart}</h2>
+      <h3>Weight: {weight}</h3>
+      <h3>Reps: {reps}</h3>
+      <h3>Sets: {sets}</h3>
+      <button
+        className="card-button"
+        onClick={() => setShowForm((showForm) => !showForm)}
+      >
         {showForm ? "Hide Form" : "Update"}
       </button>
       {showForm ? (

@@ -1,11 +1,13 @@
 import React from "react";
 
 function BlogCard({ subject, date, content }) {
-  return <div>
+  return (
+    <div className="card">
       <h3>{subject}</h3>
-      <p>{date}</p>
+      <h4>{date}</h4>
       <p>{content}</p>
-  </div>;
+    </div>
+  );
 }
 
 export default BlogCard;

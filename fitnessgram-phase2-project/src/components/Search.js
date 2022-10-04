@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 
 function Search({ search, setSearch }) {
   return (
-    <div>
+    <div className="search-bar">
       <input
+        className="search-input"
         type="search"
-        placeholder="Search..."
+        placeholder="Search Exercise Here..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       ></input>
