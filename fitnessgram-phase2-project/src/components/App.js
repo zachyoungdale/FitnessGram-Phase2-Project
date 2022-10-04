@@ -52,7 +52,7 @@ function App() {
         addNewExercise={addNewExercise}
         updateExercise={updateExercise}
       />
-      <BlogList />
+      <BlogList blogs={blogs}/>
       <NewBlogForm />
     </div>
   );
