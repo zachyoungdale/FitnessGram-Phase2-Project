@@ -23,9 +23,6 @@ function NewBlogForm({ addNewBlog }) {
     .then(data => addNewBlog(data)) 
   }
   
-
-  
-
   return ( 
     <div>
     NewBlogForm

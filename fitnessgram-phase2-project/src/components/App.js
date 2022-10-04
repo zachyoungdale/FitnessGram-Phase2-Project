@@ -25,6 +25,10 @@ function App() {
     setExercises([...exercises, newObj]);
   }
 
+  function addNewBlog(newBlog) {
+    setBlogs([...blogs, newBlog])
+  }
+
   function updateExercise(updatedObj) {
     const updatedExerciseArray = exercises.map((exercise) => {
       if (exercise.id === updatedObj.id) {
@@ -52,8 +56,8 @@ function App() {
         addNewExercise={addNewExercise}
         updateExercise={updateExercise}
       />
-      <BlogList blogs={blogs}/>
-      <NewBlogForm />
+      <BlogList blogs={blogs} />
+      <NewBlogForm addNewBlog={addNewBlog}/>
     </div>
   );
 }
