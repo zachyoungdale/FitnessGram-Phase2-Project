@@ -4,10 +4,12 @@ import ExerciseList from "./ExerciseList";
 import BlogList from "./BlogList";
 import NewBlogForm from "./NewBlogForm";
 import Header from "./Header";
+import Search from "./Search";
 
 function App() {
   const [exercises, setExercises] = useState([]);
   const [blogs, setBlogs] = useState([]);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     fetch(`http://localhost:3000/exercises`)
@@ -19,16 +21,39 @@ function App() {
       .then((data) => setBlogs(data));
   }, []);
 
-  function addNewBlog(newBlog) {
-    setBlogs([...blogs, newBlog])
+  function addNewExercise(newObj) {
+    setExercises([...exercises, newObj]);
   }
+
+  function updateExercise(updatedObj) {
+    const updatedExerciseArray = exercises.map((exercise) => {
+      if (exercise.id === updatedObj.id) {
+        return updatedObj;
+      }
+      return exercise;
+    });
+
+    setExercises(updatedExerciseArray);
+  }
+
+  const filteredExerciseArray = exercises.filter((exercise) => {
+    return (
+      exercise.name.toLowerCase().includes(search.toLowerCase()) ||
+      exercise.bodyPart.toLowerCase().includes(search.toLowerCase())
+    );
+  });
 
   return (
     <div className="App">
       <Header />
-      <ExerciseList />
-      <BlogList blogs={blogs}/>
-      <NewBlogForm addNewBlog={addNewBlog}/>
+      <Search search={search} setSearch={setSearch} />
+      <ExerciseList
+        exercises={filteredExerciseArray}
+        addNewExercise={addNewExercise}
+        updateExercise={updateExercise}
+      />
+      <BlogList />
+      <NewBlogForm />
     </div>
   );
 }
