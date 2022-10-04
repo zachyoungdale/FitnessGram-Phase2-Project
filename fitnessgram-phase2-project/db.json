@@ -81,13 +81,12 @@
       "sets": 3
     }
   ],
-
   "blogs": [
     {
       "id": 1,
       "subject": "Your blog posts will show here",
-      "Date": "September 1, 2022",
-      "Message": "This will be where you can write your blog content! "
+      "date": "September 1, 2022",
+      "content": "This will be where you can write your blog content! "
     }
   ]
 }

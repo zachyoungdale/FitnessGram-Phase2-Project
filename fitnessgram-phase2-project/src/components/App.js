@@ -19,12 +19,16 @@ function App() {
       .then((data) => setBlogs(data));
   }, []);
 
+  function addNewBlog(newBlog) {
+    setBlogs([...blogs, newBlog])
+  }
+
   return (
     <div className="App">
       <Header />
       <ExerciseList />
-      <BlogList />
-      <NewBlogForm />
+      <BlogList blogs={blogs}/>
+      <NewBlogForm addNewBlog={addNewBlog}/>
     </div>
   );
 }
