@@ -25,7 +25,6 @@ function NewBlogForm({ addNewBlog }) {
   
   return ( 
     <div>
-    NewBlogForm
     <h2>Post your blog</h2>
   <form onSubmit={handleSubmit}>
     <input type="text" name="subject" placeholder="Enter subject..." onChange={(e) => setSubject(e.target.value)}/>

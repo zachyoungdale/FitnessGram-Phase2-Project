@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
-
 import ExerciseList from "./ExerciseList";
 import BlogList from "./BlogList";
 import NewBlogForm from "./NewBlogForm";
 import Header from "./Header";
 import Search from "./Search";
+import NavBar from "./NavBar";
+import NewExerciseForm from "./NewExerciseForm";
+import { Route, Switch } from "react-router-dom";
 
 function App() {
   const [exercises, setExercises] = useState([]);
@@ -50,14 +52,26 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <NavBar />
       <Search search={search} setSearch={setSearch} />
-      <ExerciseList
-        exercises={filteredExerciseArray}
-        addNewExercise={addNewExercise}
-        updateExercise={updateExercise}
-      />
-      <BlogList blogs={blogs} />
-      <NewBlogForm addNewBlog={addNewBlog}/>
+        <Switch>
+          <Route exact path="/exercise-list">
+            <ExerciseList 
+            exercises={filteredExerciseArray}
+            addNewExercise={addNewExercise}
+            updateExercise={updateExercise}
+            />
+          </Route>
+          <Route path="/blog-list">
+            <BlogList blogs={blogs} />
+          </Route>
+          <Route path="/new-blog-form">
+            <NewBlogForm addNewBlog={addNewBlog}/>
+          </Route>
+          <Route path="/new-exercise-form">
+            <NewExerciseForm />
+          </Route>
+        </Switch>
     </div>
   );
 }

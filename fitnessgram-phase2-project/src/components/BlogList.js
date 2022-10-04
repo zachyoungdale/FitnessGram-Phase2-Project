@@ -7,7 +7,7 @@ function BlogList({ blogs }) {
     <BlogCard {...blog} key={blog.id} />
     )
   })
-  return <div>BlogList
+  return <div>
     <ul className="display-card">{displayCard}</ul>
   </div>;
  }
