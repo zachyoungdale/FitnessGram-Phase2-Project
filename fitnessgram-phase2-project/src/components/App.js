@@ -54,7 +54,6 @@ function App() {
     <div className="bg-light">
       <Header />
       <NavBar />
-      <Search search={search} setSearch={setSearch} />
         <Switch>
           <Route path="/blog-list">
             <BlogList blogs={blogs} />
@@ -66,6 +65,7 @@ function App() {
             <NewExerciseForm addNewExercise={addNewExercise} />
           </Route>
           <Route exact path="/">
+            <Search search={search} setSearch={setSearch} />
             <ExerciseList
             exercises={filteredExerciseArray}
             addNewExercise={addNewExercise}
