@@ -53,7 +53,6 @@ function App() {
   return (
     <div className="bg-light">
       <Header />
-      <NavBar />
         <Switch>
           <Route path="/blog-list">
             <BlogList blogs={blogs} />
