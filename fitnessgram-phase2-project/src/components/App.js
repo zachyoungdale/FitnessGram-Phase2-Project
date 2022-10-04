@@ -5,6 +5,7 @@ import BlogList from "./BlogList";
 import NewBlogForm from "./NewBlogForm";
 import Header from "./Header";
 import Search from "./Search";
+import NewExerciseForm from "./NewExerciseForm";
 
 function App() {
   const [exercises, setExercises] = useState([]);
@@ -26,7 +27,7 @@ function App() {
   }
 
   function addNewBlog(newBlog) {
-    setBlogs([...blogs, newBlog])
+    setBlogs([...blogs, newBlog]);
   }
 
   function updateExercise(updatedObj) {
@@ -56,8 +57,9 @@ function App() {
         addNewExercise={addNewExercise}
         updateExercise={updateExercise}
       />
+      <NewExerciseForm addNewExercise={addNewExercise} />
       <BlogList blogs={blogs} />
-      <NewBlogForm addNewBlog={addNewBlog}/>
+      <NewBlogForm addNewBlog={addNewBlog} />
     </div>
   );
 }
