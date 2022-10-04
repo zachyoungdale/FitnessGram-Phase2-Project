@@ -1,8 +1,11 @@
-import { AppBar } from "@mui/material";
 import React from "react";
 
 function Header() {
-  return <AppBar>FitnessGram</AppBar>;
+  return (
+    <div className="bg-primary" size="xlg">
+      FitnessGram
+    </div>
+  );
 }
 
 export default Header;

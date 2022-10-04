@@ -1,6 +1,7 @@
-import { Card, CardContent, Button } from "@mui/material";
 import React, { useState } from "react";
 import UpdateCard from "./UpdateCard";
+import Button from "react-bootstrap/button";
+import { Card } from "react-bootstrap/";
 
 function ExerciseCard({
   name,
@@ -13,15 +14,20 @@ function ExerciseCard({
 }) {
   const [showForm, setShowForm] = useState(false);
   return (
-    <Card variant="outlined" sx={{ maxWidth: 200 }}>
-      <CardContent>
-        <h2>{name}</h2>
-        <h3>Body Part: {bodyPart}</h3>
-        <h4>Weight: {weight}</h4>
-        <h4>Reps: {reps}</h4>
-        <h4>Sets: {sets}</h4>
+    <Card
+      style={{ width: "18rem", margin: "10px" }}
+      bg="light"
+      text="dark"
+      border="primary"
+    >
+      <Card.Body>
+        <Card.Title>{name}</Card.Title>
+        <Card.Subtitle>Body Part: {bodyPart}</Card.Subtitle>
+        <Card.Text>Weight: {weight}</Card.Text>
+        <Card.Text>Reps: {reps}</Card.Text>
+        <Card.Text>Sets: {sets}</Card.Text>
         <Button
-          variant="contained"
+          variant="primary"
           onClick={() => setShowForm((showForm) => !showForm)}
         >
           {showForm ? "Hide Form" : "Update"}
@@ -38,7 +44,7 @@ function ExerciseCard({
             setShowForm={setShowForm}
           />
         ) : null}
-      </CardContent>
+      </Card.Body>
     </Card>
   );
 }

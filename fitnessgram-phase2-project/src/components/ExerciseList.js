@@ -1,9 +1,16 @@
-import { Container, Grid } from "@mui/material";
 import React, { useState } from "react";
+import { Container, Row } from "react-bootstrap";
 import ExerciseCard from "./ExerciseCard";
 import NewExerciseForm from "./NewExerciseForm";
+import Search from "./Search";
 
-function ExerciseList({ exercises, addNewExercise, updateExercise }) {
+function ExerciseList({
+  exercises,
+  addNewExercise,
+  updateExercise,
+  search,
+  setSearch,
+}) {
   const exerciseCards = exercises.map((exercise) => {
     return (
       <ExerciseCard
@@ -15,10 +22,9 @@ function ExerciseList({ exercises, addNewExercise, updateExercise }) {
   });
 
   return (
-    <Container>
-      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-        {exerciseCards}
-      </Grid>
+    <Container fluid="md">
+      <Search search={search} setSearch={setSearch} />
+      <Row>{exerciseCards}</Row>
     </Container>
   );
 }

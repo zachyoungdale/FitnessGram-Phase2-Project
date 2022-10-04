@@ -49,13 +49,14 @@ function App() {
   });
 
   return (
-    <div className="App">
+    <div className="bg-light">
       <Header />
-      <Search search={search} setSearch={setSearch} />
       <ExerciseList
         exercises={filteredExerciseArray}
         addNewExercise={addNewExercise}
         updateExercise={updateExercise}
+        search={search}
+        setSearch={setSearch}
       />
       <NewExerciseForm addNewExercise={addNewExercise} />
       <BlogList blogs={blogs} />
