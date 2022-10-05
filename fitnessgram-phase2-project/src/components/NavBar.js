@@ -21,7 +21,7 @@ function NavBar() {
           to="/new-blog-form"
           exact
           style={linkStyles}
-          activeStyle={{ background: "lightblue" }}
+          activeStyle={{ background: "darkblue", color: "white" }}
         >
           New Blog
         </NavLink>
@@ -29,7 +29,7 @@ function NavBar() {
           to="/new-exercise-form"
           exact
           style={linkStyles}
-          activeStyle={{ background: "lightblue" }}
+          activeStyle={{ background: "darkblue", color: "white" }}
         >
           New Exercise
         </NavLink>
@@ -37,7 +37,7 @@ function NavBar() {
           to="/blog-list"
           exact
           style={linkStyles}
-          activeStyle={{ background: "lightblue" }}
+          activeStyle={{ background: "darkblue", color: "white" }}
         >
           Blogs
         </NavLink>
@@ -45,7 +45,7 @@ function NavBar() {
           to="/"
           exact
           style={linkStyles}
-          activeStyle={{ background: "lightblue" }}
+          activeStyle={{ background: "darkblue", color: "white" }}
         >
           Exercises
         </NavLink>
