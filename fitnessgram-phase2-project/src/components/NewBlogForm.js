@@ -46,7 +46,7 @@ function NewBlogForm({ addNewBlog }) {
           placeholder="Enter date..."
           onChange={(e) => setDate(e.target.value)}
         />
-        <input
+        <textarea
           className="new-inputs"
           id="blog-content"
           type="text"

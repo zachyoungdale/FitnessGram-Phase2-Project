@@ -41,7 +41,7 @@ code {
 
 .search-input:focus {
   box-shadow: 0 4px 8px 0 blue;
-  transition: 0.50s;
+  transition: 0.5s;
 }
 
 .card-button,
@@ -104,6 +104,10 @@ code {
   padding: 5px;
 }
 
+#blog-content {
+  border-width: 2px;
+}
+
 .new-label {
   font-size: large;
   font-weight: bold;
@@ -117,4 +121,3 @@ code {
   box-shadow: 0 4px 8px 0 blue;
   transition: 0.5s;
 }
-
