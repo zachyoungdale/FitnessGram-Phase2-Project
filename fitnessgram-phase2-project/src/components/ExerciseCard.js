@@ -15,7 +15,7 @@ function ExerciseCard({
     <div className="card">
       <h1>{name}</h1>
       <h2>Body Part: {bodyPart}</h2>
-      <h3>Weight: {weight}</h3>
+      <h3>Weight: {weight} lbs</h3>
       <h3>Reps: {reps}</h3>
       <h3>Sets: {sets}</h3>
       <button

@@ -33,51 +33,67 @@ function NewExerciseForm({ addNewExercise }) {
     setNewSets(0);
   }
   return (
-    <form onSubmit={handleSubmit} className="new-exercise-form">
-      <label for="name">Name:</label>
+    <form onSubmit={handleSubmit} className="new-form">
+      <h1 id="form-title">Enter New Exercise:</h1>
+      <label for="name" className="new-label">
+        Name:
+      </label>
       <input
-        className="new-exercise-inputs"
+        className="new-inputs"
+        id="new-name"
         type="text"
         name="Name"
         value={newName}
         onChange={(e) => setNewName(e.target.value)}
       />
-      <label for="bodyPart">Body Part:</label>
+      <label for="bodyPart" className="new-label">
+        Body Part:
+      </label>
       <input
-        className="new-exercise-inputs"
+        className="new-inputs"
+        id="new-bodyPart"
         type="text"
         name="Body Part"
         value={newBodyPart}
         onChange={(e) => setNewBodyPart(e.target.value)}
       />
 
-      <label for="weight">Weight:</label>
+      <label for="weight" className="new-label">
+        Weight:
+      </label>
       <input
-        className="new-exercise-inputs"
+        className="new-inputs"
+        id="new-weight"
         type="number"
         name="Weight"
         value={newWeight}
         onChange={(e) => setNewWeight(e.target.value)}
       />
 
-      <label for="reps">Reps:</label>
+      <label for="reps" className="new-label">
+        Reps:
+      </label>
       <input
-        className="new-exercise-inputs"
+        className="new-inputs"
+        id="new-reps"
         type="number"
         name="Reps"
         value={newReps}
         onChange={(e) => setNewReps(e.target.value)}
       />
 
-      <label for="sets">Sets:</label>
+      <label for="sets" className="new-label">
+        Sets:
+      </label>
       <input
-        className="new-exercise-inputs"
+        className="new-inputs"
+        id="new-sets"
         type="number"
         name="Sets"
         value={newSets}
         onChange={(e) => setNewSets(e.target.value)}
       />
-      <input type="submit" value="Submit" />
+      <input className="form-button" type="submit" value="Submit" />
     </form>
   );
 }
