@@ -78,3 +78,17 @@ code {
   flex: 1 1 100%;
   justify-content: center;
 }
+
+.new-exercise-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+  padding: 10px;
+}
+
+.new-exercise-inputs {
+  width: 300px;
+  padding: 15px;
+}

@@ -33,9 +33,10 @@ function NewExerciseForm({ addNewExercise }) {
     setNewSets(0);
   }
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="new-exercise-form">
       <label for="name">Name:</label>
       <input
+        className="new-exercise-inputs"
         type="text"
         name="Name"
         value={newName}
@@ -43,6 +44,7 @@ function NewExerciseForm({ addNewExercise }) {
       />
       <label for="bodyPart">Body Part:</label>
       <input
+        className="new-exercise-inputs"
         type="text"
         name="Body Part"
         value={newBodyPart}
@@ -51,6 +53,7 @@ function NewExerciseForm({ addNewExercise }) {
 
       <label for="weight">Weight:</label>
       <input
+        className="new-exercise-inputs"
         type="number"
         name="Weight"
         value={newWeight}
@@ -59,6 +62,7 @@ function NewExerciseForm({ addNewExercise }) {
 
       <label for="reps">Reps:</label>
       <input
+        className="new-exercise-inputs"
         type="number"
         name="Reps"
         value={newReps}
@@ -67,6 +71,7 @@ function NewExerciseForm({ addNewExercise }) {
 
       <label for="sets">Sets:</label>
       <input
+        className="new-exercise-inputs"
         type="number"
         name="Sets"
         value={newSets}
