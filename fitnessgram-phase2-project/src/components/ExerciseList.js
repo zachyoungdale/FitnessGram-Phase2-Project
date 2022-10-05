@@ -1,9 +1,8 @@
 import React from "react";
 
 import ExerciseCard from "./ExerciseCard";
-import Search from "./Search";
 
-function ExerciseList({ exercises, updateExercise, search, setSearch }) {
+function ExerciseList({ exercises, updateExercise }) {
   const exerciseCards = exercises.map((exercise) => {
     return (
       <ExerciseCard
@@ -14,12 +13,7 @@ function ExerciseList({ exercises, updateExercise, search, setSearch }) {
     );
   });
 
-  return (
-    <div>
-      <Search search={search} setSearch={setSearch} />
-      {exerciseCards}
-    </div>
-  );
+  return <div className="card-list">{exerciseCards}</div>;
 }
 
 export default ExerciseList;

@@ -4,6 +4,7 @@ import ExerciseList from "./ExerciseList";
 import BlogList from "./BlogList";
 import NewBlogForm from "./NewBlogForm";
 import Header from "./Header";
+import Search from "./Search";
 
 import NewExerciseForm from "./NewExerciseForm";
 
@@ -51,6 +52,7 @@ function App() {
   return (
     <div className="bg-light">
       <Header />
+      <Search search={search} setSearch={setSearch} />
       <ExerciseList
         exercises={filteredExerciseArray}
         addNewExercise={addNewExercise}
