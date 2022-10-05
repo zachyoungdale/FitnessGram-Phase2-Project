@@ -7,7 +7,7 @@ function BlogList({ blogs }) {
   });
   return (
     <div>
-      <ul className="display-card">{displayCard}</ul>
+      <ul>{displayCard}</ul>
     </div>
   );
 }

@@ -1,16 +1,9 @@
-import React, { useState } from "react";
-import { Container, Row } from "react-bootstrap";
+import React from "react";
+
 import ExerciseCard from "./ExerciseCard";
-import NewExerciseForm from "./NewExerciseForm";
 import Search from "./Search";
 
-function ExerciseList({
-  exercises,
-  addNewExercise,
-  updateExercise,
-  search,
-  setSearch,
-}) {
+function ExerciseList({ exercises, updateExercise, search, setSearch }) {
   const exerciseCards = exercises.map((exercise) => {
     return (
       <ExerciseCard
@@ -22,10 +15,10 @@ function ExerciseList({
   });
 
   return (
-    <Container fluid="md">
+    <div>
       <Search search={search} setSearch={setSearch} />
-      <Row>{exerciseCards}</Row>
-    </Container>
+      {exerciseCards}
+    </div>
   );
 }
 
